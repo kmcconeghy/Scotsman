@@ -1,6 +1,4 @@
-#' @title load.packages
-#'
-#' @description Check for package and load if found
+#' Check for package and load if found
 #'
 #' @param packages vector list of packages to install
 #'
