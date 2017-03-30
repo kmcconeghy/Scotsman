@@ -1,4 +1,4 @@
-#' @title Boot.ATE
+#' @title Boot.ATE: Bootstrapped marginal effects
 #'
 #' @description Estimate Average Treatment Effect with Bootstrapped CI's
 #'

@@ -1,4 +1,6 @@
-#' Loess plot with density distributions for propensity scores and outcomes on
+#' @title loess.plot: Loess plot for propensity scores
+#' 
+#' @description Loess plot with density distributions for propensity scores and outcomes on
 #' top and right, respectively.
 #'
 #' @param x vector of propensity scores.
