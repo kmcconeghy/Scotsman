@@ -1,0 +1,10 @@
+Package: Scotty
+Title: Scotty: I canna' change the laws of physics!
+Version: 0.0.0.9000
+Authors@R: person("Kevin", "McConeghy", email = "kevin.mcconeghy@gmail.com", role = c("aut", "cre"))
+Description: This package is a suite of commands for setting up projects, manipulating data, analyzing and reporting results. 
+Depends: R (>= 3.3.2)
+License: GNU Version 3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
