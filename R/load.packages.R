@@ -8,7 +8,7 @@
 #'
 
 
-load.packages <- function(packages) {
+load.packages <- function(packages, quietly=F) {
 
   CheckPackage <- function(package) {
     if(!require(package, character.only = T)) {
@@ -16,7 +16,7 @@ load.packages <- function(packages) {
   }
 
   invisible(sapply(packages, CheckPackage))
-  (.packages())
+  if (quietly=F) (.packages())
 }
 
 
