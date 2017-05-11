@@ -2,8 +2,7 @@
 % Please edit documentation in R/loess.plot.R
 \name{loess.plot}
 \alias{loess.plot}
-\title{Loess plot with density distributions for propensity scores and outcomes on
-top and right, respectively.}
+\title{loess.plot: Loess plot for propensity scores}
 \usage{
 loess.plot(x, response, treatment, responseTitle = "",
   treatmentTitle = "Treatment", percentPoints.treat = 0.2,

@@ -2,9 +2,9 @@
 % Please edit documentation in R/load.packages.R
 \name{load.packages}
 \alias{load.packages}
-\title{load.packages}
+\title{Check for package and load if found}
 \usage{
-load.packages(packages)
+load.packages(packages, quietly = F)
 }
 \arguments{
 \item{packages}{vector list of packages to install}

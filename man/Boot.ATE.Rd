@@ -2,7 +2,7 @@
 % Please edit documentation in R/Boot.ATE.R
 \name{Boot.ATE}
 \alias{Boot.ATE}
-\title{Boot.ATE}
+\title{Boot.ATE: Bootstrapped marginal effects}
 \usage{
 Boot.ATE(model, treat, R = 250, block = "", df)
 }
