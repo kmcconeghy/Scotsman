@@ -16,7 +16,7 @@ load.packages <- function(packages, quietly=F) {
   }
 
   invisible(sapply(packages, CheckPackage))
-  if (quietly=F) (.packages())
+  if (quietly==F) (.packages())
 }
 
 
