@@ -20,15 +20,15 @@ load.project <- function (FilePath, INSHEET = FALSE, MUNGE = FALSE, ANALYZE = FA
           REPORT = FALSE)
 {
   if (INSHEET == TRUE) {
-    source(paste0(FilePath, "_01_Insheet.R"),echo=T, print.eval=T)
+    source(paste0(FilePath, "01_Insheet.R"),echo=T, print.eval=T)
   }
   if (MUNGE == TRUE) {
-    source(paste0(FilePath, "_02_Munge.R"),echo=T, print.eval=T)
+    source(paste0(FilePath, "02_Munge.R"),echo=T, print.eval=T)
   }
   if (ANALYZE == TRUE) {
-    source(paste0(FilePath, "_03_Analyze.R"),echo=T, print.eval=T)
+    source(paste0(FilePath, "03_Analyze.R"),echo=T, print.eval=T)
   }
   if (REPORT == TRUE) {
-    source(paste0(FilePath, "_04_Report.R"),echo=T, print.eval=T)
+    source(paste0(FilePath, "04_Report.R"),echo=T, print.eval=T)
   }
 }
