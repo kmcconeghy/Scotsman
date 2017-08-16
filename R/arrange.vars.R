@@ -1,6 +1,8 @@
-#' @title arrange.vars
+#' @title arrange.vars: Arrange columns
 #'
 #' @description Rearranges columns in a dataframe 
+#' 
+#' @details Useful for reading / displaying datasets  
 #' 
 #' @param data Dataframe class object
 #' @param vars character vector that identifies position of each variable
@@ -11,10 +13,10 @@
 #'
 #' @examples
 #' data(iris)
-#' #Put Species as first column
+#' Put Species as first column
 #' head(arrange.vars(iris, c('Species'=1)))
 #' 
-#' @export
+#' @export arrange.vars
 #'
 arrange.vars <- function(data, vars) {
   

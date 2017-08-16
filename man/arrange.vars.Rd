@@ -2,7 +2,7 @@
 % Please edit documentation in R/arrange.vars.R
 \name{arrange.vars}
 \alias{arrange.vars}
-\title{arrange.vars}
+\title{arrange.vars: Arrange columns}
 \usage{
 \method{arrange}{vars}(data, vars)
 }
@@ -17,9 +17,12 @@ Dataframe class object
 \description{
 Rearranges columns in a dataframe
 }
+\details{
+Useful for reading / displaying datasets
+}
 \examples{
 data(iris)
-#Put Species as first column
+Put Species as first column
 head(arrange.vars(iris, c('Species'=1)))
 
 }
