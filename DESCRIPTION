@@ -1,6 +1,6 @@
 Package: Scotty
 Title: Scotty: misc. functions
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person("Kevin", "McConeghy", email = "kevin.mcconeghy@gmail.com", role = c("aut", "cre"))
 Description: This package is a suite of commands for setting up projects, manipulating data, analyzing and reporting results. 
 Depends: R (>= 3.3.2)
