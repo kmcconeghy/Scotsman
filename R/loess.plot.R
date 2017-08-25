@@ -33,9 +33,9 @@ loess.plot <- function(x, response, treatment,
                            					   points.treat.alpha=.2,
                            					   points.control.alpha=.1,
                            					   ...) {
-require(ggplot2)
-require(grid)
-require(gridExtra)
+require(ggplot2, quietly=T)
+require(grid, quietly=T)
+require(gridExtra, quietly=T)
 
     #Set up dataframe
     df = data.frame(ps=x, response=response, treatment=as.logical(treatment))
@@ -59,7 +59,7 @@ require(gridExtra)
     }
 
    	#Add Loess
-    pmain = pmain + geom_smooth(...) + ylab(responseTitle) + xlab("Propensity Score") +
+    pmain = pmain + geom_smooth(method='loess') + ylab(responseTitle) + xlab("Propensity Score") +
      				theme(legend.position='none', legend.justification='left') +
             scale_colour_hue(treatmentTitle) +  xlim(range(df$ps)) + ylim(range(df$response))
 
@@ -100,7 +100,7 @@ require(gridExtra)
                 			  panel.background=element_blank(),
                 			  panel.grid.major=element_blank(),
                 			  panel.grid.minor=element_blank(),
-                			  panel.margin=element_blank()) +
+                			  panel.spacing = element_blank()) +
 
    	    scale_colour_hue(treatmentTitle)
 
