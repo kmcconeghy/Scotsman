@@ -1,10 +1,41 @@
 Package: Scotty
 Title: Scotty: misc. functions
-Version: 0.0.1
-Authors@R: person("Kevin", "McConeghy", email = "kevin.mcconeghy@gmail.com", role = c("aut", "cre"))
-Description: This package is a suite of commands for setting up projects, manipulating data, analyzing and reporting results. 
-Depends: R (>= 3.3.2)
-License: GNU Version 3
-Encoding: UTF-8
+Version: 0.0.2
+Authors@R: c(person(given = "Kevin W.", family = "McConeghy", role = c("aut", "cre", "cph")
+Description: This package is a suite of personal commands for use by the primary author on various projects. 
+Depends: R (>= 3.4.2),
+  tidyverse, 
+  lubridate (>= 1.6.0),
+Imports:
+    dplyr (>= 0.7.4),
+    tidyr(>= 0.7.2),
+    ggplot2,
+    scales(>= 0.5.0),
+    tibble,
+    rlang,
+    broom (>= 0.4.2),
+    magrittr (>= 1.5.0),
+    forecast (>= 8.2.0),
+    stats,
+    Rcpp
+Suggests:
+    knitr,
+    microbenchmark,
+    XML,
+    memoise,
+    profr,
+    digest,
+    xtable,
+    rmarkdown,
+    sessioninfo,
+    testthat,
+    roxygen2 (>= 6.0.0)
 LazyData: true
+LazyDataCompression: xz
+URL: https://github.com/kmcconeghy/Scotty
+BugReports: https://github.com/kmcconeghy/Scotty/issues
+License: GPL-3
+VignetteBuilder: knitr
 RoxygenNote: 6.0.1
+Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
+LinkingTo: Rcpp

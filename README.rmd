@@ -1,0 +1,18 @@
+Scotty: An R package designed for personal use, includes a suite of commands for manipulating, analyzing and reporting data.
+===============
+
+[![CRAN version](https://www.r-pkg.org/badges/version/Scotty)](https://cran.r-project.org/package=Scotty)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/Scotty)](https://cran.r-project.org/package=Scotty)
+
+### Specific commands  
+
+**TimeStamp** Internal function which generates a character string of current date-time. 
+
+**Boot.ATE** A function which will compute marginal effects using bootstrapped standard errors. Cluster robust option.
+
+**loess.plot** A plot function for propensity scoring estimation. Compare post-match covariate balance.  
+
+# Author  
+Kevin W. McConeghy, Pharm.D, M.S., Brown University School of Public Health, Dept. Health Services Research  
+
+# Acknowledgements  
