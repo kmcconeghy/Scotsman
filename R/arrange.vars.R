@@ -13,7 +13,6 @@
 #'
 #' @examples
 #' data(iris)
-#' Put Species as first column
 #' head(arrange.vars(iris, c('Species'=1)))
 #' 
 #' @export arrange.vars
