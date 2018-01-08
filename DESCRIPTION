@@ -1,7 +1,7 @@
 Package: Scotty
 Title: Scotty: misc. functions
 Version: 0.0.2
-Authors@R: c(person(given = "Kevin W.", family = "McConeghy", role = c("aut", "cre", "cph")
+Authors@R: c(person(given = "Kevin W.", family = "McConeghy", role = c("aut", "cre", "cph"), email = "kevin_mcconeghy@brown.edu"))
 Description: This package is a suite of personal commands for use by the primary author on various projects. 
 Depends: R (>= 3.4.2),
   tidyverse, 
