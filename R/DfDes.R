@@ -18,9 +18,7 @@
 #' @export
 #'
 DfDes <- function(df, dfName='', VarList=NA, CheckMiss=T) {
-  
-  require(dplyr)
-  
+
   #Sanity Checks
   stopifnot(is.data.frame(df))
 
