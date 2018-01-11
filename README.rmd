@@ -6,11 +6,33 @@ Scotty: An R package designed for personal use, includes a suite of commands for
 
 ### Specific commands  
 
-**TimeStamp** Internal function which generates a character string of current date-time. 
+**arrange.vars** An simple function for rearranging columns in a table. Adapted 
+from code posted on StackExchange.  
 
-**Boot.ATE** A function which will compute marginal effects using bootstrapped standard errors. Cluster robust option.
+**boot_ATE** A function which will compute marginal effects using bootstrapped standard errors. Cluster robust option.  
 
-**loess.plot** A plot function for propensity scoring estimation. Compare post-match covariate balance.  
+**des_char** Under construction...
+
+**des_df** A simple function for summary description of tables
+
+**des_factor** Under construction...  
+
+**des_num** A function for describing a numeric variable  
+
+**des_var** Wrapper which applies des_char, des_factor or des_num as appropriate  
+
+**load_pkgs** Load up a group of packages
+
+**load_prj** An internal function for running a project from a master file
+
+**gg_loess** A plot function for propensity scoring estimation. Compare post-match covariate balance. 
+
+**TimeStamp** Internal function which generates a formatted character string of current date-time. 
+
+**VarByGr** Function which summarizes numeric/int by group
+
+Additional xlsx functions to be used with the xlsx package. Code adapted from 
+online postings.  
 
 # Author  
 Kevin W. McConeghy, Pharm.D, M.S., Brown University School of Public Health, Dept. Health Services Research  

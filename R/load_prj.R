@@ -1,4 +1,4 @@
-#' @title load.project
+#' @title load_prj
 #'
 #' @description Initiate project commands, this program will search the SrcPath directory 
 #' for files which conform to the nomenclature, A[0-9][0-9], B[0-9][0-9], C[0-9][0-9], D[0-9]
@@ -20,7 +20,7 @@
 #'
 #'
 
-load.project <- function (FilePath, 
+load_prj <- function (FilePath, 
                           INSHEET = F, MUNGE = F, ANALYZE = F, REPORT = F,
                           SrcPath, ReportPath) {
   #Generate list of code files

@@ -1,4 +1,4 @@
-#' @title loess.plot: Loess plot for propensity scores
+#' @title gg_loess: Loess plot for propensity scores
 #' 
 #' @description Loess plot with density distributions for propensity scores and outcomes on
 #' top and right, respectively.
@@ -21,11 +21,11 @@
 #' lalonde <- lalonde
 #' m.out <- matchit(treat ~ age + educ + black + hispan, data=lalonde, method="nearest")
 #' df_m <- match.data(m.out)
-#' loess.plot(df_m$distance, df_m$age, df_m$treat)
+#' gg_loess(df_m$distance, df_m$age, df_m$treat)
 #'
 #'
 
-loess.plot <- function(x, response, treatment,
+gg_loess <- function(x, response, treatment,
                            					   responseTitle='',
                            					   treatmentTitle='Treatment',
                            					   percentPoints.treat=0.2,

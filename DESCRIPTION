@@ -17,7 +17,6 @@ Imports:
     magrittr (>= 1.5.0),
     forecast (>= 8.2.0),
     stats,
-    Rcpp
 Suggests:
     knitr,
     microbenchmark,
@@ -38,4 +37,3 @@ License: GPL-3
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
-LinkingTo: Rcpp

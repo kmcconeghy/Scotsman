@@ -1,4 +1,4 @@
-#' @title varEDA
+#' @title des_var
 #'
 #' @description Generate an object with html table of var statistics
 #'
@@ -18,7 +18,7 @@
 #' @export
 #'
 
-varEDA <- function(x) {
+des_var <- function(x) {
 
   #x <- cars$speed
   var.class <- class(x)

@@ -1,14 +1,15 @@
-#' Check for package and load if found
+#' @title load_pkgs
+#' @description Check for package and load if found
 #'
+#' @usage load_pkgs()
+#' 
 #' @param packages vector list of packages to install
 #'
 #' @export
 #' @examples
-#' load.packages("plyr")
+#' load.packages(c("dplyr", "ggplot2", "tm")
 #'
-
-
-load.packages <- function(packages, quietly=F) {
+load_pkgs <- function(packages, quietly=F) {
 
   CheckPackage <- function(package) {
     if(!require(package, character.only = T)) {

@@ -1,4 +1,4 @@
-#' @title DfDes: Simple description of dataframe
+#' @title des_df: Simple description of dataframe
 #'
 #' @description Reports on dataset size, row counts, unique variables. Requires dplyr.
 #'
@@ -13,11 +13,11 @@
 #'
 #' @examples
 #' data(iris)
-#' DfDes(iris, 'Flower dataset', c('Petal.Length'))
+#' des_df(iris, 'Flower dataset', c('Petal.Length'))
 #' 
 #' @export
 #'
-DfDes <- function(df, dfName='', VarList=NA, CheckMiss=T) {
+des_df <- function(df, dfName='', VarList=NA, CheckMiss=T) {
 
   #Sanity Checks
   stopifnot(is.data.frame(df))

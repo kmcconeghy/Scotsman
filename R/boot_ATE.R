@@ -1,9 +1,9 @@
-#' @title Boot.ATE: Bootstrapped marginal effects
+#' @title boot_ATE: Bootstrapped marginal effects
 #'
 #' @description Estimate Average Treatment Effect with Bootstrapped CI's
 #'
 #' @details
-#' Boot.ATE will take a glm regression object and compute predicted outcomes with
+#' boot_ATE will take a glm regression object and compute predicted outcomes with
 #' treatment = 1 and treatment 0; It will then bootstrap the model and compute effects.
 #' There is an option for block bootstrapping to compute cluster robust intervals.
 #' Bootstrapped confidence intervals are percentile.
@@ -27,7 +27,7 @@
 #' require(boot)
 #' data(ohio)
 #' model <- glm(resp ~ age + smoke, data=ohio, family=binomial())
-#' b1 <- Boot.ATE(model, treat="smoke", R=10000, df=ohio, block="id", type="perc")
+#' b1 <- boot_ATE(model, treat="smoke", R=10000, df=ohio, block="id", type="perc")
 #' b1$ate
 #'
 #' b1$coeff #Bootstrapped
@@ -43,7 +43,7 @@
 #' confint.geeglm(g1, "smoke") #Comparison to GEE
 #' @export
 #'
-Boot.ATE <- function(model, treat, R=250, block="", df) {
+boot_ATE <- function(model, treat, R=250, block="", df) {
 
   require(boot)
   require(dplyr)

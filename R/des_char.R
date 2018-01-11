@@ -1,4 +1,4 @@
-#' @title CharEDA
+#' @title des_char
 #'
 #' @description Exploratory data analysis of a string character var
 #'
@@ -21,7 +21,7 @@
 require(tm)
 require(wordcloud)
 
-CharEDA <-
+des_char <-
 function (fvar)
 {
   df <- data.frame(fvar)

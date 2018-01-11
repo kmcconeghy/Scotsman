@@ -1,4 +1,4 @@
-#' @title FactorEDA
+#' @title des_factor
 #'
 #' @description Exploratory data analysis of a Factor variable
 #'
@@ -18,7 +18,7 @@
 #' @export
 #'
 #'
-FactorEDA <- function(fvar) {
+des_factor <- function(fvar) {
   df <- data.frame(fvar)
   n <- length(fvar)
   empty <- sum(which(fvar==''))

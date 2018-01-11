@@ -1,4 +1,4 @@
-#' @title NumEDA
+#' @title des_num
 #'
 #' @description Exploratory data analysis of a numeric variable
 #'
@@ -18,7 +18,7 @@
 #' @export
 #'
 
-NumEDA <- function(numvar) {
+des_num <- function(numvar) {
 
   numvar <- cars$speed
 
