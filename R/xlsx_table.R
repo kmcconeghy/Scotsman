@@ -1,9 +1,9 @@
-#' @title xlsx.AddTable
+#' @title xlsx_table
 #'
 #' @description Several commands to be used with xlsx package
 #'
 #' @details
-#' Package contains xlsx.AddTable,
+#' Package contains xlsx_table,
 #'
 #' @param wb Workbook object
 #' @param sheet A sheet class object created by xlsx package (see example)
@@ -27,13 +27,12 @@
 #' @export
 #'
 #'
-xlsx.AddTable<-function(wb, sheet, data, startRow=NULL,startCol=1,
+xlsx_table<-function(wb, sheet, data, startRow=NULL,startCol=1,
                         col.names=TRUE, row.names=TRUE, columnWidth=14,
                         fontColor="#FFFFFF", fontSize=12,
                         rownamesFill="white", colnamesFill="white",
                         rowFill=c("white", "white")){
 
-  library("xlsx")
   #++++++++++++++++++++++++++++++++++++++
   #Define table style
   #++++++++++++++++++++++++++++++++++++++

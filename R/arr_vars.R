@@ -1,4 +1,4 @@
-#' @title arrange.vars: Arrange columns
+#' @title arr_vars: Arrange columns
 #'
 #' @description Rearranges columns in a dataframe 
 #' 
@@ -13,11 +13,11 @@
 #'
 #' @examples
 #' data(iris)
-#' head(arrange.vars(iris, c('Species'=1)))
+#' head(arr_vars(iris, c('Species'=1)))
 #' 
-#' @export arrange.vars
+#' @export arr_vars
 #'
-arrange.vars <- function(data, vars) {
+arr_vars <- function(data, vars) {
   
   stopifnot(is.data.frame(data))
   

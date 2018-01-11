@@ -22,7 +22,7 @@ List of length = groups
 Function which summarizes numeric/int by group
 }
 \details{
-First object column 1 (group[1]), second obj column 2 (group[2])
+First object column 1 (group\link{1}), second obj column 2 (group\link{2})
 to be used in generating a "table one"
 }
 \examples{

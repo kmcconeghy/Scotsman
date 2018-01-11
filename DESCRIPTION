@@ -17,6 +17,9 @@ Imports:
     magrittr (>= 1.5.0),
     forecast (>= 8.2.0),
     stats,
+    xlsx, 
+    tm,
+    wordcloud
 Suggests:
     knitr,
     microbenchmark,

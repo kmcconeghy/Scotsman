@@ -18,9 +18,6 @@
 #' @export
 #'
 
-require(tm)
-require(wordcloud)
-
 des_char <-
 function (fvar)
 {

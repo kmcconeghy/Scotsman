@@ -1,4 +1,4 @@
-#' @title xlsx.AddHeader
+#' @title xlsx_header
 #'
 #' @description Several commands to be used with xlsx package
 #'
@@ -18,10 +18,8 @@
 #' @export
 #'
 
-xlsx.AddHeader<-function(wb, sheet, value="Header",StartRow=NULL, StartCol=1)
+xlsx_header<-function(wb, sheet, value="Header",StartRow=NULL, StartCol=1)
 {
-  library("xlsx")
-
   # Define some cell styles within that workbook
   H_STYLE <- CellStyle(wb) + Font(wb, heightInPoints=16, color="white", isItalic=FALSE, isBold=TRUE, underline=0)
 

@@ -28,9 +28,7 @@
 #'
 xlsx_paragph<-function(wb,sheet, value, fontColor="#FFFFFF", fontSize=12, backGroundColor="#FFFFFF",
                             isBold=FALSE, isItalic=FALSE,
-                            startRow=NULL, startCol=1, colSpan=10, rowSpan=6)
-{
-  library("xlsx")
+                            startRow=NULL, startCol=1, colSpan=10, rowSpan=6) {
   #Append table to sheet
   if(is.null(startRow)){
     rows<- getRows(sheet) #list of row object
@@ -51,5 +49,5 @@ xlsx_paragph<-function(wb,sheet, value, fontColor="#FFFFFF", fontSize=12, backGr
   #Spanning region : -1, because we start to count from zero.
   #if not, an additionnal row or column are added to merged region
   addMergedRegion(sheet, startRow, endRow=startRow+rowSpan-1, startCol, endColumn=startCol+colSpan-1)
-  xlsx.AddLineBreak(sheet, rowSpan)
+  xlsx_break(sheet, rowSpan)
 }

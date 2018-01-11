@@ -1,4 +1,4 @@
-#' @title xlsx.AddLineBreak
+#' @title xlsx_break
 #'
 #' @description Several commands to be used with xlsx package
 #'
@@ -14,10 +14,7 @@
 #' @export
 #'
 
-xlsx.AddLineBreak<-function(sheet, numberOfLine=1)
-{
-  library("xlsx")
-
+xlsx_break<-function(sheet, numberOfLine=1) {
   nrows<-length(getRows(sheet)) #list of row object
   startRow=nrows
   for(i in 1:numberOfLine){
