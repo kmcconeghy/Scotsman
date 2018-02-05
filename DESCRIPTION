@@ -3,7 +3,7 @@ Title: Scotty: misc. functions
 Version: 0.0.2
 Authors@R: c(person(given = "Kevin W.", family = "McConeghy", role = c("aut", "cre", "cph"), email = "kevin_mcconeghy@brown.edu"))
 Description: This package is a suite of personal commands for use by the primary author on various projects. 
-Depends: R (>= 3.4.2),
+Depends: R (>= 3.3.3),
   tidyverse, 
   lubridate (>= 1.6.0),
 Imports:
