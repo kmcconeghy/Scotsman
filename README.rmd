@@ -29,9 +29,9 @@ from code posted on StackExchange.
 
 **TimeStamp** Internal function which generates a formatted character string of current date-time. 
 
-**VarByGr** Function which summarizes numeric/int by group
+**t1_** "Table one" functions which assist in building a nicely formatted table one for manuscripts/reports.  
 
-Additional xlsx functions to be used with the xlsx package. Code adapted from 
+Additional xlsx functions to be used with the xlsx package. Code adapted from
 online postings.  
 
 # Author  
