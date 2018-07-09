@@ -25,13 +25,15 @@ from code posted on StackExchange.
 
 **load_pkgs** Load up a group of packages
 
-**load_prj** An internal function for running a project from a master file
+**load_prj** An internal function for running a project from a master file, must be canonical.
+
+**load_rmd** An internal function for loading settings for using in project set-up, must be canonical.
 
 **TimeStamp** Internal function which generates a formatted character string of current date-time. 
 
-**t1_** "Table one" functions which assist in building a nicely formatted table one for manuscripts/reports.  
+**numeric_** Functions which assist in building a nicely formatted table for manuscripts/reports.  
 
-Additional xlsx functions to be used with the xlsx package. Code adapted from
+**xlsx_** Additional xlsx functions to be used with the xlsx package. Code adapted from
 online postings.  
 
 # Author  
