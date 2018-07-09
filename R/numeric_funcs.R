@@ -19,7 +19,7 @@
 #' num_cont(mtcars$mpg)
 #'
 #' @references
-num_cont <- function(x, .digits=2) {
+num_cont <- function(x, .digits=2, ...) {
 
   mean <- signif(mean(x, na.rm=T), digits = .digits)
   sd <- signif(sd(x, na.rm=T), digits = .digits)
@@ -52,7 +52,7 @@ num_cont <- function(x, .digits=2) {
 #' num_fctr(mtcars$cyl, .referent=4)
 #'
 #' @references
-num_fctr <- function(x, .digits=2, .referent = TRUE) {
+num_fctr <- function(x, .digits=2, .referent = TRUE, ...) {
 
   if (class(x)=='numeric' | class(x)=='logical') .referent = as.numeric(.referent)
 
@@ -99,7 +99,7 @@ num_fctr <- function(x, .digits=2, .referent = TRUE) {
 #' num_dt(mds_dta$dmdate)
 #'
 #' @references
-num_dt <- function(dt, median = TRUE, range='min/max', origin=NULL) {
+num_dt <- function(dt, median = TRUE, range='min/max', origin=NULL, ...) {
 
   if (class(dt) !='Date') {
     stopifnot(class(dt)=='Integer')
