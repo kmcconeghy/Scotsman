@@ -19,17 +19,24 @@
 #'
 des_df <- function(df, dfName='', VarList=NA, CheckMiss=T) {
 
-  #Sanity Checks
-  stopifnot(is.data.frame(df))
-
-  #Stats
-  DfMemSize <- format(object.size(df), units = 'Mb', digits=0)
-  DfStamp <- ""
-  DfStamp <- paste0(DfStamp, 'Dataframe: ', dfName, sep='\n')
-  DfStamp <- paste0(DfStamp, 'Memory Size: ', prettyNum(DfMemSize, big.mark = ','), sep='  ')
-  DfStamp <- paste0(DfStamp, 'Rows: ', prettyNum(nrow(df), big.mark = ','), sep='  ')
-  DfStamp <- paste0(DfStamp, 'Columns: ', prettyNum(ncol(df), big.mark = ','), sep='\n')
+  #Sanity Checks  
+  #EQ Dataframe  
+  eq_df <- rlang::enquo(df) %>% rlang::get_expr(.)
   
+  dfName <- dplyr::if_else(dfName=='', 
+                           rlang::quo_text(eq_df),
+                           dfName)
+  
+  if (is.data.frame(df)==F) stop()
+  
+  #Stats
+    DfMemSize <- format(object.size(df), units = 'Mb', digits=0)
+    DfStamp <- ""
+    DfStamp <- paste0(DfStamp, 'Dataframe: ', dfName, sep='\n')
+    DfStamp <- paste0(DfStamp, 'Memory Size: ', prettyNum(DfMemSize, big.mark = ','), sep='  ')
+    DfStamp <- paste0(DfStamp, 'Rows: ', prettyNum(nrow(df), big.mark = ','), sep='  ')
+    DfStamp <- paste0(DfStamp, 'Columns: ', prettyNum(ncol(df), big.mark = ','), sep='\n')
+    
   if (!is.na(VarList[1])) {
     for (i in VarList) {
       if (CheckMiss==F) {
