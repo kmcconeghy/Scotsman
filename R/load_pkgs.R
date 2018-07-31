@@ -7,7 +7,7 @@
 #'
 #' @export
 #' @examples
-#' load.packages(c("dplyr", "ggplot2", "tm")
+#' load_pkgs(c("dplyr", "ggplot2", "tm")
 #'
 load_pkgs <- function(packages, quietly=F) {
 
