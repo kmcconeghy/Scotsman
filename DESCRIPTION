@@ -3,7 +3,7 @@ Title: Scotty: misc. functions
 Version: 0.0.2
 Authors@R: c(person(given = "Kevin W.", family = "McConeghy", role = c("aut", "cre", "cph"), email = "kevin_mcconeghy@brown.edu"))
 Description: This package is a suite of personal commands for use by the primary author on various projects. 
-Depends: R (>= 3.3.3),
+Depends: R (>= 3.5.1),
   tidyverse, 
   lubridate (>= 1.6.0),
 Imports:
@@ -38,5 +38,5 @@ URL: https://github.com/kmcconeghy/Scotty
 BugReports: https://github.com/kmcconeghy/Scotty/issues
 License: GPL-3
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))

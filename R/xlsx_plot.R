@@ -2,7 +2,7 @@
 #'
 #' @description Several commands to be used with xlsx package
 #'
-#' @details
+#' @details Function for adding plot to a excel sheet using xlsx package
 #'
 #' @param wb Workbook class object
 #' @param sheet Sheet class object
@@ -15,10 +15,7 @@
 #'
 #' @author Kevin W. McConeghy
 #'
-#' @examples
-#'
 #' @export
-#'
 xlsx_plot<-function( wb, sheet, plotFunction, startRow=NULL,startCol=1,
                         width=480, height=480,... ) {
   png(filename = "plot.png", width = width, height = height,...)

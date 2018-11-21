@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>des_factor — des_factor • Scotty</title>
+<title>inst_pkgs — inst_pkgs • Scotty</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="des_factor — des_factor" />
+<meta property="og:title" content="inst_pkgs — inst_pkgs" />
 
-<meta property="og:description" content="Exploratory data analysis of a Factor variable" />
+<meta property="og:description" content="Install a standard list of packages" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -102,61 +102,68 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>des_factor</h1>
-    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/des_factor.R'><code>R/des_factor.R</code></a></small>
-    <div class="hidden name"><code>des_factor.Rd</code></div>
+    <h1>inst_pkgs</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/inst_pkgs.R'><code>R/inst_pkgs.R</code></a></small>
+    <div class="hidden name"><code>inst_pkgs.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Exploratory data analysis of a Factor variable</p>
+    <p>Install a standard list of packages</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>des_factor</span>(<span class='no'>fvar</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>fvar</th>
-      <td><p>dataframe object</p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>Object with generical information, statistics, ggplot2 plots</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>This function will take a dataframe, provide summary statistics graphs</p>
-    
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>if no filepath specified, will default to working directory with timestamp.</p>
-    
+    <pre class="usage"><span class='fu'>inst_pkgs</span>()</pre>
+        
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>inst_pkgs</span>()</div><div class='output co'>#&gt; <span class='message'>Loading required package: data.table</span></div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called 'data.table'</span></div><div class='output co'>#&gt; <span class='message'>Installing package into 'C:/Users/Rluv/Documents/R/win-library/3.5'</span>
+#&gt; <span class='message'>(as 'lib' is unspecified)</span></div><div class='output co'>#&gt; package 'data.table' successfully unpacked and MD5 sums checked
+#&gt; 
+#&gt; The downloaded binary packages are in
+#&gt; 	C:\Users\Rluv\AppData\Local\Temp\RtmpGw1JN3\downloaded_packages</div><div class='output co'>#&gt; <span class='message'>Loading required package: haven</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: rcpp</span></div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called 'rcpp'</span></div><div class='output co'>#&gt; <span class='message'>Installing package into 'C:/Users/Rluv/Documents/R/win-library/3.5'</span>
+#&gt; <span class='message'>(as 'lib' is unspecified)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: package 'rcpp' is not available (for R version 3.5.1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Perhaps you meant 'Rcpp' ?</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: DT</span></div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called 'DT'</span></div><div class='output co'>#&gt; <span class='message'>Installing package into 'C:/Users/Rluv/Documents/R/win-library/3.5'</span>
+#&gt; <span class='message'>(as 'lib' is unspecified)</span></div><div class='output co'>#&gt; <span class='message'>also installing the dependencies 'httpuv', 'sourcetools', 'shiny', 'later', 'htmlwidgets', 'crosstalk', 'promises'</span></div><div class='output co'>#&gt; package 'httpuv' successfully unpacked and MD5 sums checked
+#&gt; package 'sourcetools' successfully unpacked and MD5 sums checked
+#&gt; package 'shiny' successfully unpacked and MD5 sums checked
+#&gt; package 'later' successfully unpacked and MD5 sums checked
+#&gt; package 'htmlwidgets' successfully unpacked and MD5 sums checked
+#&gt; package 'crosstalk' successfully unpacked and MD5 sums checked
+#&gt; package 'promises' successfully unpacked and MD5 sums checked
+#&gt; package 'DT' successfully unpacked and MD5 sums checked
+#&gt; 
+#&gt; The downloaded binary packages are in
+#&gt; 	C:\Users\Rluv\AppData\Local\Temp\RtmpGw1JN3\downloaded_packages</div><div class='output co'>#&gt; <span class='message'>Loading required package: gee</span></div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called 'gee'</span></div><div class='output co'>#&gt; <span class='message'>Installing package into 'C:/Users/Rluv/Documents/R/win-library/3.5'</span>
+#&gt; <span class='message'>(as 'lib' is unspecified)</span></div><div class='output co'>#&gt; package 'gee' successfully unpacked and MD5 sums checked
+#&gt; 
+#&gt; The downloaded binary packages are in
+#&gt; 	C:\Users\Rluv\AppData\Local\Temp\RtmpGw1JN3\downloaded_packages</div><div class='output co'>#&gt; $tidyverse
+#&gt; NULL
+#&gt; 
+#&gt; $data.table
+#&gt; NULL
+#&gt; 
+#&gt; $haven
+#&gt; NULL
+#&gt; 
+#&gt; $rcpp
+#&gt; NULL
+#&gt; 
+#&gt; $DT
+#&gt; NULL
+#&gt; 
+#&gt; $gee
+#&gt; NULL
+#&gt; </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#note">Note</a></li>
-      
+            
       <li><a href="#examples">Examples</a></li>
     </ul>
 
-    <h2>Author</h2>
-    <p>Kevin W. McConeghy</p>
   </div>
 </div>
 

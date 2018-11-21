@@ -11,10 +11,10 @@ num_fctr(x, .digits=2, .referent = TRUE)
 
 \item{.digits}{Significant figures to round to}
 
-\item{.referent}{Value to compute no. (%) for}
+\item{.referent}{Value to compute no. (percent) for}
 }
 \value{
-A character string of length 1, 'No. (%)'
+A character string of length 1, 'No. (percent)'
 }
 \description{
 Given a single numeric vector or factor,

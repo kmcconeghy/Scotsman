@@ -16,13 +16,6 @@
 #'        \code{\link{stat_smooth}}.
 #' @return a ggplot2 figure
 #' @export
-#' @examples
-#' require(MatchIt)
-#' lalonde <- lalonde
-#' m.out <- matchit(treat ~ age + educ + black + hispan, data=lalonde, method="nearest")
-#' df_m <- match.data(m.out)
-#' gg_loess(df_m$distance, df_m$age, df_m$treat)
-#'
 #'
 
 gg_loess <- function(x, response, treatment,

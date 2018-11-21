@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>des_factor — des_factor • Scotty</title>
+<title>num_cont: Compute mean (standard deviation) — num_cont • Scotty</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,11 @@
 
 
 
-<meta property="og:title" content="des_factor — des_factor" />
+<meta property="og:title" content="num_cont: Compute mean (standard deviation) — num_cont" />
 
-<meta property="og:description" content="Exploratory data analysis of a Factor variable" />
+<meta property="og:description" content="Given a single numeric vector, will compute mean and
+standard deviation, returning results in string. Mostly called by
+other functions." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -102,43 +104,42 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>des_factor</h1>
-    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/des_factor.R'><code>R/des_factor.R</code></a></small>
-    <div class="hidden name"><code>des_factor.Rd</code></div>
+    <h1>num_cont: Compute mean (standard deviation)</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/numeric_funcs.R'><code>R/numeric_funcs.R</code></a></small>
+    <div class="hidden name"><code>num_cont.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Exploratory data analysis of a Factor variable</p>
+    <p>Given a single numeric vector, will compute mean and
+standard deviation, returning results in string. Mostly called by
+other functions.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>des_factor</span>(<span class='no'>fvar</span>)</pre>
+    <pre class="usage"><span class='fu'>numeric_cont</span>(<span class='no'>x</span>, <span class='kw'>.digits</span><span class='kw'>=</span><span class='fl'>2</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>fvar</th>
-      <td><p>dataframe object</p></td>
+      <th>x</th>
+      <td><p>A numeric vector</p></td>
+    </tr>
+    <tr>
+      <th>.digits</th>
+      <td><p>Significant figures to round to</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Object with generical information, statistics, ggplot2 plots</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>This function will take a dataframe, provide summary statistics graphs</p>
-    
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>if no filepath specified, will default to working directory with timestamp.</p>
+    <p>A character string of length 1, 'mean (SD)'</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>require</a></span>(<span class='no'>Scotty</span>)
+<span class='fu'>num_cont</span>(<span class='no'>mtcars</span>$<span class='no'>mpg</span>)</div><div class='output co'>#&gt; [1] "20 (6)"</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -147,16 +148,10 @@
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#note">Note</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
 
-    <h2>Author</h2>
-    <p>Kevin W. McConeghy</p>
   </div>
 </div>
 

@@ -20,6 +20,7 @@ This function will take a dataframe variable, provide summary and graphs
 }
 \examples{
 data("acq")
+
 }
 \author{
 Kevin W. McConeghy

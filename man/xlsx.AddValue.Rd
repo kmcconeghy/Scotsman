@@ -4,7 +4,8 @@
 \alias{xlsx.AddValue}
 \title{xlsx.AddValue}
 \usage{
-xlsx.AddValue(wb, sheet, value = "Header", StartRow = NULL, StartCol = 1)
+xlsx.AddValue(wb, sheet, value = "Header", StartRow = NULL,
+  StartCol = 1)
 }
 \arguments{
 \item{wb}{Workbook object}

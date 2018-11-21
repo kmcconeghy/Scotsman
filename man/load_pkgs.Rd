@@ -13,6 +13,6 @@ load_pkgs()
 Check for package and load if found
 }
 \examples{
-load.packages(c("dplyr", "ggplot2", "tm")
+load_pkgs(c("dplyr", "ggplot2", "tm")
 
 }

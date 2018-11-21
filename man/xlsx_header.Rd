@@ -4,7 +4,8 @@
 \alias{xlsx_header}
 \title{xlsx_header}
 \usage{
-xlsx_header(wb, sheet, value = "Header", StartRow = NULL, StartCol = 1)
+xlsx_header(wb, sheet, value = "Header", StartRow = NULL,
+  StartCol = 1)
 }
 \arguments{
 \item{wb}{Workbook object}

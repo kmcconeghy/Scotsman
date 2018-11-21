@@ -2,17 +2,14 @@
 #'
 #' @description Several commands to be used with xlsx package
 #'
-#' @details
+#' @details Adds a row between input commands to an excel object from xlsx package
 #'
 #' @param sheet A sheet class object created by xlsx package (see example)
 #' @param numberOfLine Number of linebreaks
 #'
 #' @author Kevin W. McConeghy
 #'
-#' @examples
-#'
 #' @export
-#'
 
 xlsx_break<-function(sheet, numberOfLine=1) {
   nrows<-length(getRows(sheet)) #list of row object

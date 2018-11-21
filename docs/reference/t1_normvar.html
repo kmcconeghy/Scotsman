@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>des_factor — des_factor • Scotty</title>
+<title>t1_binvar: "Table One", Binary Variable Summary — t1_normvar • Scotty</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,10 @@
 
 
 
-<meta property="og:title" content="des_factor — des_factor" />
+<meta property="og:title" content="t1_binvar: "Table One", Binary Variable Summary — t1_normvar" />
 
-<meta property="og:description" content="Exploratory data analysis of a Factor variable" />
+<meta property="og:description" content="Function which summarizes dichotomous or binary
+variable by a named group" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -102,39 +103,48 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>des_factor</h1>
-    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/des_factor.R'><code>R/des_factor.R</code></a></small>
-    <div class="hidden name"><code>des_factor.Rd</code></div>
+    <h1>t1_binvar: "Table One", Binary Variable Summary</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/t1_normvar.R'><code>R/t1_normvar.R</code></a></small>
+    <div class="hidden name"><code>t1_normvar.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Exploratory data analysis of a Factor variable</p>
+    <p>Function which summarizes dichotomous or binary
+variable by a named group</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>des_factor</span>(<span class='no'>fvar</span>)</pre>
+    <pre class="usage"><span class='fu'>t1_normvar</span>(<span class='no'>data</span>, <span class='no'>.var</span>, <span class='no'>.group</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='no'>T</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>fvar</th>
-      <td><p>dataframe object</p></td>
+      <th>data</th>
+      <td><p>Dataframe</p></td>
+    </tr>
+    <tr>
+      <th>.var</th>
+      <td><p>Variable to be summarized</p></td>
+    </tr>
+    <tr>
+      <th>.group</th>
+      <td><p>Group to summarize over</p></td>
+    </tr>
+    <tr>
+      <th>quietly</th>
+      <td><p>If FALSE, function will report some internal steps</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Object with generical information, statistics, ggplot2 plots</p>
+    <p>List of length = groups</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This function will take a dataframe, provide summary statistics graphs</p>
-    
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>if no filepath specified, will default to working directory with timestamp.</p>
+    <p>Supply a dataframe, a variable to summarize, a group variable</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -149,8 +159,6 @@
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
-
-      <li><a href="#note">Note</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

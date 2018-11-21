@@ -14,8 +14,8 @@ xlsx_break(sheet, numberOfLine = 1)
 \description{
 Several commands to be used with xlsx package
 }
-\examples{
-
+\details{
+Adds a row between input commands to an excel object from xlsx package
 }
 \author{
 Kevin W. McConeghy

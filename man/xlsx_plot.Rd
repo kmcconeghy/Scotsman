@@ -27,8 +27,8 @@ xlsx_plot(wb, sheet, plotFunction, startRow = NULL, startCol = 1,
 \description{
 Several commands to be used with xlsx package
 }
-\examples{
-
+\details{
+Function for adding plot to a excel sheet using xlsx package
 }
 \author{
 Kevin W. McConeghy
