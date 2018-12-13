@@ -1,25 +1,22 @@
 Package: Scotty
 Title: Scotty: misc. functions
-Version: 0.0.2
+Version: 0.0.4
 Authors@R: c(person(given = "Kevin W.", family = "McConeghy", role = c("aut", "cre", "cph"), email = "kevin_mcconeghy@brown.edu"))
 Description: This package is a suite of personal commands for use by the primary author on various projects. 
-Depends: R (>= 3.3.3),
+Depends: R (>= 3.5.1),
   tidyverse, 
-  lubridate (>= 1.6.0),
+  lubridate (>= 1.7.0),
 Imports:
-    dplyr (>= 0.7.4),
-    tidyr(>= 0.7.2),
-    ggplot2,
+    dplyr(>= 0.7.7),
+    tidyr(>= 0.8.2),
+    ggplot2(>= 3.1.0),
     scales(>= 0.5.0),
     tibble,
-    rlang,
-    broom (>= 0.4.2),
-    magrittr (>= 1.5.0),
-    forecast (>= 8.2.0),
+    rlang(>= 0.3.0),
+    broom(>= 0.4.2),
+    magrittr(>= 1.5.0),
+    forecast(>= 8.2.0),
     stats,
-    xlsx, 
-    tm,
-    wordcloud
 Suggests:
     knitr,
     microbenchmark,
@@ -31,12 +28,12 @@ Suggests:
     rmarkdown,
     sessioninfo,
     testthat,
-    roxygen2 (>= 6.0.0)
+    roxygen2 
 LazyData: true
 LazyDataCompression: xz
 URL: https://github.com/kmcconeghy/Scotty
 BugReports: https://github.com/kmcconeghy/Scotty/issues
 License: GPL-3
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
