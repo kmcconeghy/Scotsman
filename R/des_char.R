@@ -2,8 +2,7 @@
 #'
 #' @description Exploratory data analysis of a string character var
 #'
-#' @details
-#' This function will take a dataframe variable, provide summary and graphs
+#' @details This function will take a dataframe variable, provide summary and graphs
 #'
 #' @param fvar string variable
 #'
@@ -11,10 +10,14 @@
 #'
 #' @author Kevin W. McConeghy
 #'
+<<<<<<< HEAD
 #' @note TBD
 #'
+=======
+>>>>>>> ac4a1379fbce82a8589d6049f7e1cc939c3f3ff6
 #' @examples
 #' data("acq")
+#' 
 #' @export
 #'
 

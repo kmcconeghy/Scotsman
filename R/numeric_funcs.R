@@ -40,9 +40,9 @@ num_cont <- function(x, .digits=2, ...) {
 #'
 #' @param .digits Significant figures to round to
 #'
-#' @param .referent Value to compute no. (%) for
+#' @param .referent Value to compute no. (percent) for
 #'
-#' @return A character string of length 1, 'No. (%)'
+#' @return A character string of length 1, 'No. (percent)'
 #'
 #' @export
 #'
