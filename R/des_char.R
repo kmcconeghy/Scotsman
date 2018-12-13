@@ -11,7 +11,7 @@
 #'
 #' @author Kevin W. McConeghy
 #'
-#' @note
+#' @note TBD
 #'
 #' @examples
 #' data("acq")
