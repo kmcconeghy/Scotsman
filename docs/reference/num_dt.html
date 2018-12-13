@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>gg_loess: Loess plot for propensity scores — gg_loess • Scotty</title>
+<title>num_dt: Compute median date, range. — num_dt • Scotty</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,10 +30,12 @@
 
 
 
-<meta property="og:title" content="gg_loess: Loess plot for propensity scores — gg_loess" />
+<meta property="og:title" content="num_dt: Compute median date, range. — num_dt" />
 
-<meta property="og:description" content="Loess plot with density distributions for propensity scores and outcomes on
-top and right, respectively." />
+<meta property="og:description" content="Given a single integer vector (with origin specified)
+or data class vector, will compute median day and a range
+(default min/max) and percent of total, returning results in string.
+Mostly called by other functions." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,74 +105,64 @@ top and right, respectively." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>gg_loess: Loess plot for propensity scores</h1>
-    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/gg_loess.R'><code>R/gg_loess.R</code></a></small>
-    <div class="hidden name"><code>gg_loess.Rd</code></div>
+    <h1>num_dt: Compute median date, range.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/numeric_funcs.R'><code>R/numeric_funcs.R</code></a></small>
+    <div class="hidden name"><code>num_dt.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Loess plot with density distributions for propensity scores and outcomes on
-top and right, respectively.</p>
+    <p>Given a single integer vector (with origin specified)
+or data class vector, will compute median day and a range
+(default min/max) and percent of total, returning results in string.
+Mostly called by other functions.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>gg_loess</span>(<span class='no'>x</span>, <span class='no'>response</span>, <span class='no'>treatment</span>, <span class='kw'>responseTitle</span> <span class='kw'>=</span> <span class='st'>""</span>,
-  <span class='kw'>treatmentTitle</span> <span class='kw'>=</span> <span class='st'>"Treatment"</span>, <span class='kw'>percentPoints.treat</span> <span class='kw'>=</span> <span class='fl'>0.2</span>,
-  <span class='kw'>percentPoints.control</span> <span class='kw'>=</span> <span class='fl'>0.1</span>, <span class='kw'>points.treat.alpha</span> <span class='kw'>=</span> <span class='fl'>0.2</span>,
-  <span class='kw'>points.control.alpha</span> <span class='kw'>=</span> <span class='fl'>0.1</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>num_dt</span>(<span class='no'>x</span>, <span class='kw'>median</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>range</span><span class='kw'>=</span><span class='st'>'min/max'</span>, <span class='kw'>origin</span><span class='kw'>=</span><span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>range</th>
+      <td><p>A character string to indicate range values. options:
+'min/max'.</p></td>
+    </tr>
+    <tr>
+      <th>origin</th>
+      <td><p>Default NULL. If specified,
+must be a date class object of length 1. For use if date variable is in
+raw integer format.</p></td>
+    </tr>
+    <tr>
       <th>x</th>
-      <td><p>vector of propensity scores.</p></td>
+      <td><p>A integer or date class vector</p></td>
     </tr>
     <tr>
-      <th>response</th>
-      <td><p>the response variable.</p></td>
-    </tr>
-    <tr>
-      <th>treatment</th>
-      <td><p>the treatment varaible as a logical type.</p></td>
-    </tr>
-    <tr>
-      <th>responseTitle</th>
-      <td><p>the label to use for the y-axis (i.e. the name of the response variable)</p></td>
-    </tr>
-    <tr>
-      <th>treatmentTitle</th>
-      <td><p>the label to use for the treatment legend.</p></td>
-    </tr>
-    <tr>
-      <th>percentPoints.treat</th>
-      <td><p>the percentage of treatment points to randomly plot.</p></td>
-    </tr>
-    <tr>
-      <th>percentPoints.control</th>
-      <td><p>the percentage of control points to randomly plot.</p></td>
-    </tr>
-    <tr>
-      <th>points.treat.alpha</th>
-      <td><p>the transparency level for treatment points.</p></td>
-    </tr>
-    <tr>
-      <th>points.control.alpha</th>
-      <td><p>the transparency level for control points.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>other parameters passed to <code>geom_smooth</code> and
-<code>stat_smooth</code>.</p></td>
+      <th>nomedian</th>
+      <td><p>A logical vector, indicates whether to report median or not.
+Default = TRUE.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a ggplot2 figure</p>
+    <p>A character string of length 1, 'Median date (date1, date2)'</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>require</a></span>(<span class='no'>mdsR</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: mdsR</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: openxlsx</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: rlang</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'rlang'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:data.table':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    :=</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:testthat':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    is_false, is_null, is_true</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:purrr':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    %@%, %||%, as_function, flatten, flatten_chr, flatten_dbl,</span>
+#&gt; <span class='message'>    flatten_int, flatten_lgl, invoke, list_along, modify, prepend,</span>
+#&gt; <span class='message'>    rep_along, splice</span></div><div class='input'><span class='no'>mds_dta</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>mdsR</span><span class='kw ns'>::</span><span class='no'>mds_cohort</span></div><div class='output co'>#&gt; <span class='error'>Error: 'mds_cohort' is not an exported object from 'namespace:mdsR'</span></div><div class='input'><span class='fu'>num_dt</span>(<span class='no'>mds_dta</span>$<span class='no'>dmdate</span>)</div><div class='output co'>#&gt; [1] "2015-03-22 (2013-01-02, 2018-07-18)"</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -178,7 +170,9 @@ top and right, respectively.</p>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

@@ -9,12 +9,7 @@
 #' @return Object with generic information, statistics
 #'
 #' @author Kevin W. McConeghy
-#'
-<<<<<<< HEAD
-#' @note TBD
-#'
-=======
->>>>>>> ac4a1379fbce82a8589d6049f7e1cc939c3f3ff6
+#' 
 #' @examples
 #' data("acq")
 #' 

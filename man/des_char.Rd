@@ -18,11 +18,9 @@ Exploratory data analysis of a string character var
 \details{
 This function will take a dataframe variable, provide summary and graphs
 }
-\note{
-TBD
-}
 \examples{
 data("acq")
+
 }
 \author{
 Kevin W. McConeghy

@@ -37,26 +37,6 @@ treatment = 1 and treatment 0; It will then bootstrap the model and compute effe
 There is an option for block bootstrapping to compute cluster robust intervals.
 Bootstrapped confidence intervals are percentile.
 }
-\examples{
-require(geepack)
-require(boot)
-data(ohio)
-model <- glm(resp ~ age + smoke, data=ohio, family=binomial())
-b1 <- boot_ATE(model, treat="smoke", R=10000, df=ohio, block="id", type="perc")
-b1$ate
-
-b1$coeff #Bootstrapped
-confint.geeglm <- function(object, parm, level = 0.95, ...) {
- cc <- coef(summary(object))
- mult <- qnorm((1+level)/2)
- citab <- with(as.data.frame(cc),
-               cbind(lwr=Estimate-mult*Std.err,
-                     upr=Estimate+mult*Std.err))
- rownames(citab) <- rownames(cc)
- citab[parm,]
- }
-confint.geeglm(g1, "smoke") #Comparison to GEE
-}
 \author{
 Kevin W. McConeghy
 }

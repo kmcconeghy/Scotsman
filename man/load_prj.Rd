@@ -4,33 +4,32 @@
 \alias{load_prj}
 \title{load_prj}
 \usage{
-load_prj(FilePath, INSHEET = F, MUNGE = F, ANALYZE = F, REPORT = F,
-  SrcPath, ReportPath)
+load_prj(FilePath, INSHEET = F, MUNGE = F, REPORT = F, SrcPath,
+  ReportPath)
 }
 \arguments{
 \item{FilePath}{Root folder where insheet etc. located}
 
-\item{INSHEET}{logic indicator for which files to run}
+\item{INSHEET}{logical for which files to run}
 
-\item{MUNGE}{logic indicator for which files to run}
+\item{MUNGE}{logical for which files to run}
 
-\item{ANALYZE}{logic indicator for which files to run}
-
-\item{REPORT}{logic indicator for which files to run}
+\item{REPORT}{logical for which files to run}
 
 \item{SrcPath}{Path whether code files exist}
 
-\item{ReportPath}{Path to place log files}
+\item{OutPath}{Path to place files}
 }
 \description{
-Initiate project commands, this program will search the SrcPath directory
-for files which conform to the nomenclature, A\link{0-9}, B\link{0-9}, C\link{0-9}, D\link{0-9}
+Initiate project commands in Scotty canon project, this program will search the SrcPath
+directory for files which conform to the nomenclature, 'A\link{0-9}', 'B\link{0-9}',
+'C\link{0-9}', 'D\link{0-9}'
 }
 \examples{
 
 FilePath <- 'mydir'
 CodePath <- 'CodeDir'
-load.project(FilePath,INSHEET=TRUE) #Run Insheet only
+load_prj(FilePath, INSHEET=TRUE) #Run Insheet only
 
 
 }
