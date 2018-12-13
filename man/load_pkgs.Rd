@@ -4,7 +4,7 @@
 \alias{load_pkgs}
 \title{load_pkgs}
 \usage{
-load_pkgs()
+load_pkgs(packages, quietly=F)
 }
 \arguments{
 \item{packages}{vector list of packages to install}
@@ -13,6 +13,6 @@ load_pkgs()
 Check for package and load if found
 }
 \examples{
-load.packages(c("dplyr", "ggplot2", "tm")
+load_pkgs(c("dplyr", "ggplot2", "tm"))
 
 }
