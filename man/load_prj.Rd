@@ -4,21 +4,18 @@
 \alias{load_prj}
 \title{load_prj}
 \usage{
-load_prj(FilePath, INSHEET = F, MUNGE = F, REPORT = F, SrcPath,
-  ReportPath)
+load_prj(INSHEET = F, MUNGE = F, REPORT = F, SrcPath, ReportPath)
 }
 \arguments{
-\item{FilePath}{Root folder where insheet etc. located}
-
 \item{INSHEET}{logical for which files to run}
 
 \item{MUNGE}{logical for which files to run}
 
 \item{REPORT}{logical for which files to run}
 
-\item{SrcPath}{Path whether code files exist}
+\item{SrcPath}{Path whether markdown files exist}
 
-\item{OutPath}{Path to place files}
+\item{OutPath}{Path to place rendered files}
 }
 \description{
 Initiate project commands in Scotty canon project, this program will search the SrcPath
@@ -29,7 +26,7 @@ directory for files which conform to the nomenclature, 'A\link{0-9}', 'B\link{0-
 
 FilePath <- 'mydir'
 CodePath <- 'CodeDir'
-load_prj(FilePath, INSHEET=TRUE) #Run Insheet only
+load_prj(INSHEET=TRUE, SrcPath=CodePath, ReportPath = FilePath) #Run Insheet only
 
 
 }
