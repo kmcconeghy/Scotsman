@@ -5,3 +5,4 @@ quote, author, year
 "The ships hung in the sky, much the way that bricks don't",,
 "So long and thanks for all the fish.",,
 "Progress isn't made by early risers. It's made by lazy men trying to find easier ways to do something.",,
+"I am invisible, understand, simply because people refuse to see me."

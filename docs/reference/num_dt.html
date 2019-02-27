@@ -152,7 +152,16 @@ Default = TRUE.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>require</a></span>(<span class='no'>mdsR</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: mdsR</span></div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called 'mdsR'</span></div><div class='input'><span class='no'>mds_dta</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>mdsR</span><span class='kw ns'>::</span><span class='no'>mds_cohort</span></div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called 'mdsR'</span></div><div class='input'><span class='fu'>num_dt</span>(<span class='no'>mds_dta</span>$<span class='no'>dmdate</span>)</div><div class='output co'>#&gt; <span class='error'>Error in num_dt(mds_dta$dmdate): object 'mds_dta' not found</span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>require</a></span>(<span class='no'>mdsR</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: mdsR</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: openxlsx</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: rlang</span></div><div class='output co'>#&gt; <span class='warning'>Warning: package 'rlang' was built under R version 3.5.2</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'rlang'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:data.table':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    :=</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:testthat':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    is_false, is_null, is_true</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:purrr':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    %@%, as_function, flatten, flatten_chr, flatten_dbl, flatten_int,</span>
+#&gt; <span class='message'>    flatten_lgl, flatten_raw, invoke, list_along, modify, prepend,</span>
+#&gt; <span class='message'>    splice</span></div><div class='input'><span class='no'>mds_dta</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>mdsR</span><span class='kw ns'>::</span><span class='no'>mds_cohort</span></div><div class='output co'>#&gt; <span class='error'>Error: 'mds_cohort' is not an exported object from 'namespace:mdsR'</span></div><div class='input'><span class='fu'>num_dt</span>(<span class='no'>mds_dta</span>$<span class='no'>dmdate</span>)</div><div class='output co'>#&gt; [1] "2015-03-22 (2013-01-02, 2018-07-18)"</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

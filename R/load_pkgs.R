@@ -12,7 +12,7 @@
 load_pkgs <- function(packages, quietly=F) {
 
   CheckPackage <- function(package) {
-    if(!require(package, character.only = T)) {
+    if(!require(package, character.only = T, warn.conflicts = F, quietly=quietly)) {
       paste0(package," is not installed!")}
   }
 
