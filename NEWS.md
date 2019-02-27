@@ -1,3 +1,7 @@
+# Version 0.0.5 02-27-2019
+
+  * fixed issues with render_one and timestamp
+
 # Version 0.0.4 12-13-2018 
 
   * removed xlsx support and dependencies

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>load_prj — load_prj • Scotty</title>
+<title>render_one: Render a single .Rmd file, and output to location — render_one • Scotty</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,11 +30,9 @@
 
 
 
-<meta property="og:title" content="load_prj — load_prj" />
+<meta property="og:title" content="render_one: Render a single .Rmd file, and output to location — render_one" />
 
-<meta property="og:description" content="Initiate project commands in Scotty canon project, this program will search the SrcPath
-directory for files which conform to the nomenclature, 'A0-9', 'B0-9',
-'C0-9', 'D0-9'" />
+<meta property="og:description" content="render_one: Render a single .Rmd file, and output to location" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -104,53 +102,43 @@ directory for files which conform to the nomenclature, 'A0-9', 'B0-9',
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>load_prj</h1>
-    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/load_prj.R'><code>R/load_prj.R</code></a></small>
-    <div class="hidden name"><code>load_prj.Rd</code></div>
+    <h1>render_one: Render a single .Rmd file, and output to location</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kmcconeghy/Scotty/blob/master/R/render_one.R'><code>R/render_one.R</code></a></small>
+    <div class="hidden name"><code>render_one.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Initiate project commands in Scotty canon project, this program will search the SrcPath
-directory for files which conform to the nomenclature, 'A0-9', 'B0-9',
-'C0-9', 'D0-9'</p>
+    <p>render_one: Render a single .Rmd file, and output to location</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>load_prj</span>(<span class='kw'>INSHEET</span> <span class='kw'>=</span> <span class='no'>F</span>, <span class='kw'>MUNGE</span> <span class='kw'>=</span> <span class='no'>F</span>, <span class='kw'>REPORT</span> <span class='kw'>=</span> <span class='no'>F</span>, <span class='no'>SrcPath</span>, <span class='no'>ReportPath</span>)</pre>
+    <pre class="usage"><span class='fu'>render_one</span>(<span class='no'>CodeFileId</span>, <span class='no'>SrcPath</span>, <span class='no'>HtmlPath</span>, <span class='kw'>stamp</span> <span class='kw'>=</span> <span class='no'>T</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>INSHEET</th>
-      <td><p>logical for which files to run</p></td>
-    </tr>
-    <tr>
-      <th>MUNGE</th>
-      <td><p>logical for which files to run</p></td>
-    </tr>
-    <tr>
-      <th>REPORT</th>
-      <td><p>logical for which files to run</p></td>
+      <th>CodeFileId</th>
+      <td><p>file prefix with Scotty canon name, e.g. 'A01'</p></td>
     </tr>
     <tr>
       <th>SrcPath</th>
-      <td><p>Path whether markdown files exist</p></td>
+      <td><p>filepath where '.Rmd' files exist</p></td>
     </tr>
     <tr>
-      <th>OutPath</th>
-      <td><p>Path to place rendered files</p></td>
+      <th>stamp</th>
+      <td><p>default=True, will fix date-time to file name.</p></td>
+    </tr>
+    <tr>
+      <th>HtmPath</th>
+      <td><p>filepath to render to</p></td>
     </tr>
     </table>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='no'>FilePath</span> <span class='kw'>&lt;-</span> <span class='st'>'mydir'</span>
-<span class='no'>CodePath</span> <span class='kw'>&lt;-</span> <span class='st'>'CodeDir'</span>
-<span class='fu'>load_prj</span>(<span class='kw'>INSHEET</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>SrcPath</span><span class='kw'>=</span><span class='no'>CodePath</span>, <span class='kw'>ReportPath</span> <span class='kw'>=</span> <span class='no'>FilePath</span>) <span class='co'>#Run Insheet only</span></div><div class='output co'>#&gt; <span class='error'>Error in render2(i, ReportPath): could not find function "render2"</span></div><div class='input'>
-
+    <pre class="examples"><div class='input'><span class='kw pkg'>Scotty</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/Scotty/topics/render_one'>render_one</a></span>(<span class='st'>'A01'</span>, <span class='st'>'CodeFilesPath'</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='st'>'ReportFilesPath'</span>))</div><div class='output co'>#&gt; <span class='error'>Error in if (grepl(.shell_chars_regex, basename(input))) {    input_no_shell_chars &lt;- intermediates_loc(file_name_without_shell_chars(basename(input)))    if (file.exists(input_no_shell_chars)) {        stop("The name of the input file cannot contain the special shell ",             "characters: ", .shell_chars_regex, " (attempted to copy to a ",             "version without those characters '", input_no_shell_chars,             "' ", "however that file already exists)", call. = FALSE)    }    file.copy(input, input_no_shell_chars, overwrite = TRUE)    intermediates &lt;- c(intermediates, input_no_shell_chars)    input &lt;- input_no_shell_chars    if (is.null(intermediates_dir)) {        intermediates_dir &lt;- dirname(normalize_path(input_no_shell_chars))        if (same_path(intermediates_dir, dirname(original_input)))             intermediates_dir &lt;- NULL    }}: argument is of length zero</span></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -161,6 +149,8 @@ directory for files which conform to the nomenclature, 'A0-9', 'B0-9',
       <li><a href="#examples">Examples</a></li>
     </ul>
 
+    <h2>Author</h2>
+    <p>Kevin W. McConeghy</p>
   </div>
 </div>
 

@@ -14,13 +14,19 @@
 render_one <- function(CodeFileId, SrcPath, HtmlPath, stamp=T) {
   
   #Pull CodeFileId
-  RenderOne.CodeFiles <- list.files(SrcPath, pattern = ".Rmd", full.names = T)
-  RmdPath <- RenderOne.CodeFiles[str_detect(RenderOne.CodeFiles, CodeFileId)]
+  lst_files <- list.files(SrcPath, pattern = ".Rmd", full.names = T)
+  f_path <- lst_files[str_detect(lst_files, CodeFileId)]
   
-  if (stamp) HtmlPath <- paste0(HtmlPath, '.', timestamp())
+  f_name <- list.files(SrcPath, pattern = ".Rmd")[str_detect(list.files(SrcPath, pattern = ".Rmd"), CodeFileId)]
   
-  render(input=RmdPath,
-         output_dir=HtmlPath,
-         params = list(NamedId = CodeFileId),
-         envir=new.env())
+  if (stamp) { 
+    HtmlPath <- paste0(HtmlPath, f_name, '.', Scotty::timestamp(), '.html') 
+  } else {
+    HtmlPath <- paste0(HtmlPath, f_name, '.html') 
+  } 
+  
+  rmarkdown::render(input=f_path,
+                    output_file=HtmlPath,
+                    params = list(NamedId = CodeFileId),
+                    envir=new.env())
 }
