@@ -4,16 +4,16 @@
 \alias{render_one}
 \title{render_one: Render a single .Rmd file, and output to location}
 \usage{
-render_one(CodeFileId, SrcPath, HtmlPath, stamp = T)
+render_one(f_prefix, rmd_path, html_path = NULL, stamp = T)
 }
 \arguments{
-\item{CodeFileId}{file prefix with Scotty canon name, e.g. 'A01'}
+\item{f_prefix}{file prefix with Scotty canon name, e.g. 'A01'}
 
-\item{SrcPath}{filepath where '.Rmd' files exist}
+\item{rmd_path}{filepath where '.Rmd' files exist}
 
-\item{stamp}{default=True, will fix date-time to file name.}
+\item{html_path}{filepath to render to}
 
-\item{HtmPath}{filepath to render to}
+\item{timestamp}{default=True, will fix date-time to file name.}
 }
 \description{
 render_one: Render a single .Rmd file, and output to location
