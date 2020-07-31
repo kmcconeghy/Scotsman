@@ -1,6 +1,6 @@
 #' @title render_one: Render a single .Rmd file, and output to location
 #'
-#' @param f_prefix file prefix with Scotty canon name, e.g. 'A01'
+#' @param f_prefix Passes the file prefix to the markdown Scotty canon name, e.g. 'A01'
 #' @param rmd_path filepath where '.Rmd' files exist
 #' @param rend_path filepath to render to
 #' @param timestamp default=True, will fix date-time to file name.  
@@ -30,13 +30,13 @@ render_one <- function(f_prefix, rmd_path, rend_path=NULL, stamp=T) {
   rend_f_name <- gsub('.Rmd', '', rend_f_name)
   
   #if html path given, add to filename
-  if (!is.null(html_path)) rend_f_name <- paste0(rend_path, '\\', rend_f_name) 
+  if (!is.null(rend_path)) rend_f_name <- paste0(rend_path, '\\', rend_f_name) 
   
   cat(rend_f_name)
   
   #render with arguments  
   rmarkdown::render(input=f_path,
                     output_file=rend_f_name,
-                    params = list(NamedId = f_prefix),
+                    params = list(f_prefix = f_prefix),
                     envir=new.env())
 }
